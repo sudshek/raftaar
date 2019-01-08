@@ -94,6 +94,9 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
 body {
   background: #444;
   color: #fff;
@@ -127,8 +130,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem, 1rem;
-    background: #454545; }
+    padding: 0.2rem, 1rem; }
 
 a {
   color: #fff;
@@ -144,7 +146,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px); }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -230,15 +232,32 @@ main {
       .boxes div:hover span {
         color: #fff; }
 
+.sponsors {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem; }
+  .sponsors img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    margin-top: 20px 20px; }
+    .sponsors img:hover {
+      border: solid #eece1a 3px;
+      width: 120px;
+      height: 120px;
+      transition: all 0.5s ease-out; }
+
 .btn-light {
   background: #515151; }
 
 .btn-dark {
   background: #373737; }
 
-#main-footer {
+footer {
   text-align: center;
   padding: 1rem;
+  height: 60px;
   background: #2b2b2b; }
 
 @media screen and (min-width: 1170px) {
