@@ -144,7 +144,7 @@ header {
 
 main {
   padding: 4rem;
-  height: calc(100vh-60px); }
+  min-height: calc(100vh-60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -167,7 +167,12 @@ main {
     margin: auto;
     width: 150px;
     height: 150px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    border: solid #fff 3px; }
+    .about-info .bio-image:hover {
+      opacity: 0.5;
+      border: solid #eece1a 4px;
+      transition: all 0.5s ease-out; }
   .about-info .bio {
     grid-area: bio; }
   .about-info .job-1 {
@@ -180,10 +185,69 @@ main {
     background: #515151;
     padding: 0.5rem; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    height: 75%;
+    border: solid #fff 3px; }
+    .projects img:hover {
+      opacity: 0.5;
+      border: solid #eece1a 4px;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  background: #373737; }
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
+    background: #eece1a;
+    transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .boxes div {
+    display: inline-block;
+    padding: 1.5rem, 2.5rem;
+    margin-top: 1rem;
+    font-size: 20px;
+    border: solid #fff 3px;
+    text-align: center; }
+    .boxes div:hover {
+      background: #eece1a;
+      z-index: 3;
+      padding: 0.5rem 0.5rem;
+      color: black;
+      transition: all 0.5s ease-out; }
+      .boxes div:hover span {
+        color: #fff; }
+
+.btn-light {
+  background: #515151; }
+
+.btn-dark {
+  background: #373737; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b; }
+
+@media screen and (min-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -192,6 +256,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+    main .projects {
+      grid-template-columns: repeat(2, 1fr); }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -218,4 +284,6 @@ main {
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
